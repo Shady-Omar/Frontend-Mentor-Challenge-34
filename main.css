@@ -1,0 +1,298 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden; 
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.menu {
+    display: none;
+}
+
+.mob-menu {
+    display: none;
+}
+
+.nav .links {
+    width: 70%;
+}
+
+.nav .links ul {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-weight: 700;
+    color: hsl(230, 29%, 20%);
+    letter-spacing: 0.05em;
+    transition: 0.2s;
+}
+
+.nav .links ul li {
+    cursor: pointer;
+}
+
+.nav .links ul li:hover {
+    text-decoration: underline;
+}
+
+.nav .dot {
+    font-weight: 700;
+    font-size: 2em;
+    color: hsl(231, 7%, 65%);
+}
+
+.nav .log {
+    font-weight: 700;
+    color: hsl(230, 11%, 40%);
+    letter-spacing: 0.05em;
+}
+
+.nav .log:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-top: 3rem;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.left .text p {
+    color: hsl(231, 7%, 65%);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2em;
+}
+
+.left .text p span {
+    color: white;
+    background-color: hsl(230, 29%, 20%);
+    padding: 2px 10px;
+    border-radius: 1rem;
+    letter-spacing: 0;
+    margin-right: 10px;
+}
+
+.left .text h1 {
+    font-weight: 700;
+    color: hsl(230, 29%, 20%);
+    font-size: 4em;
+    margin: 0;
+    line-height: 1.1em;
+}
+
+.left .text #proj {
+    color: hsl(230, 11%, 40%);
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    width: 45%;
+}
+
+.left .btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left .btn button {
+    border: none;
+    background-color: hsl(0, 100%, 68%);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    padding: 15px 25px;
+    border-radius: 7px;
+    margin-right: 1.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.left .btn button:hover {
+    background-color: hsla(0, 100%, 68%, 0.80);
+}
+
+.left .btn span {
+    color: hsl(231, 7%, 65%);
+    letter-spacing: 0.3em;
+}
+
+.right {
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    main {
+        max-width: 100%;
+        min-width: 375px;
+        margin-bottom: 3.5rem;
+    }
+
+    Header {
+        margin-top: 1rem;
+        position: relative;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .mob-menu {
+        position: absolute;
+        width: 100%;
+        display: none;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        top: 4rem;
+        z-index: 1;
+        box-shadow: rgb(0 0 0 / 40%) 0px 8px 24px;
+        border-radius: 5px;
+    }
+
+    .mob-menu ul {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        height: 10rem;
+        justify-content: space-between;
+        list-style: none;
+        font-weight: 700;
+        color: hsl(230, 29%, 20%);
+        letter-spacing: 0.05em;
+    }
+    
+    .mob-menu ul li {
+        cursor: pointer;
+    }
+
+    .line {
+        width: 100%;
+        background-color: hsl(231, 7%, 65%);
+        height: 1px;
+    }
+
+    #log {
+        font-weight: 700;
+        color: hsl(230, 11%, 40%);
+        letter-spacing: 0.05em;
+    }
+
+    #close {
+        display: none;
+    }
+
+    section {
+        margin-top: 4rem;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: 50% 50%;
+    }
+
+    .left {
+        grid-row: 2 / span 1;
+    }
+
+    .left .text {
+        margin-bottom: 1rem;
+    }
+
+    .left .text h1 {
+        font-size: 2.5em;
+    }
+
+    .left .text #proj {
+        width: 80%;
+    }
+
+    .left .btn {
+        width: 100%;
+    }
+
+    .left .btn button {
+        font-size: 13px;
+        padding: 13px 0px;
+        width: 65%;
+    }
+
+    .left .btn span {
+        letter-spacing: 0.1em;
+        width: 65%;
+        font-size: 13px;
+    }
+
+    .right {
+        margin-bottom: 5rem;
+    }
+
+    .right img {
+        width: 165%;
+        transform: translateX(-1.5rem);
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .show {
+        display: block !important;
+    }
+}
